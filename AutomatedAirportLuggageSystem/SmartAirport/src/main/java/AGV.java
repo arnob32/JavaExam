@@ -11,6 +11,7 @@ public class AGV {
     private Baggage carryingBaggage;
     private boolean available = true;
     private final LogService logService;
+    
  // Thread pool to run AGVs concurrently
     private ExecutorService agvExecutor = Executors.newFixedThreadPool(5);
 
@@ -36,18 +37,15 @@ public class AGV {
         this.available = available;
     }
 
-    /**
-     * Moves the AGV to a destination, consuming 20% battery per trip.
-     * If battery reaches 0%, AGV becomes unavailable.
-     */
+ 
     public void moveToDestination(String destination) {
         logService.writeRecord("agv", "agv" + id, name + " moving to " + destination);
 
-        // Simulate battery drain
+     
         batteryLevel -= 20.0;
         if (batteryLevel < 0) batteryLevel = 0;
 
-        // Automatically mark as unavailable if battery is drained
+     
         if (batteryLevel <= 0) {
             available = false;
             logService.writeRecord("agv", "agv" + id,
@@ -58,18 +56,15 @@ public class AGV {
                 name + " reached " + destination + " | Battery: " + batteryLevel + "%");
     }
 
-    /**
-     * Load a baggage onto the AGV.
-     */
+  
+    
     public void loadBaggage(Baggage baggage) {
         carryingBaggage = baggage;
         available = false;
         logService.writeRecord("agv", "agv" + id, name + " loaded baggage " + baggage.getId());
     }
 
-    /**
-     * Unload baggage into the storage area.
-     */
+   
     public void unloadBaggage(StorageArea storage) {
         if (carryingBaggage != null) {
             storage.storeBaggage(carryingBaggage);
@@ -80,9 +75,7 @@ public class AGV {
         available = true;
     }
 
-    /**
-     * Charge the AGV at a given charging station.
-     */
+   
     public void chargeBattery(ChargingStation station) {
         logService.writeRecord("agv", "agv" + id,
                 name + " sent for charging at " + station.showStatus());
@@ -90,19 +83,14 @@ public class AGV {
         available = true;
     }
 
-    /**
-     * Returns a summary of AGV status for UI display.
-     */
+  
     public String showStatus() {
         String status = available ? "Free" : "Busy";
         if (batteryLevel <= 0) status = "Needs Charging ⚠️";
         return name + " | Battery: " + String.format("%.0f", batteryLevel) + "% | Status: " + status;
     }
 
-    /**
-     * Sets battery level safely between 0–100%.
-     * If battery reaches 0, AGV becomes unavailable.
-     */
+  
     public void setBatteryLevel(double level) {
         this.batteryLevel = Math.max(0, Math.min(100, level));
         if (this.batteryLevel <= 0) {
@@ -116,9 +104,7 @@ public class AGV {
         }
     }
 
-    /**
-     * Returns the current battery level.
-     */
+   
     public double getBatteryLevel() {
         return batteryLevel;
     }
