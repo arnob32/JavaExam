@@ -1,0 +1,8 @@
+[2025-11-14 02:02:00] AGV-5 loaded baggage 4
+[2025-11-14 02:02:01] AGV-5 moving to Gate E
+[2025-11-14 02:02:01] AGV-5 reached Gate E | Battery: 75.0%
+[2025-11-14 02:02:03] AGV-5 unloaded baggage 4 into storage.
+[2025-11-14 02:02:13] AGV-5 loaded baggage 7
+[2025-11-14 02:02:15] AGV-5 moving to Gate H
+[2025-11-14 02:02:15] AGV-5 reached Gate H | Battery: 45.0%
+[2025-11-14 02:02:16] AGV-5 unloaded baggage 7 into storage.

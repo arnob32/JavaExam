@@ -11,7 +11,8 @@ import java.util.concurrent.Executors;
 
 public class Dashboard extends JFrame {
 
-    private final JTextArea console = new JTextArea(15, 80);
+ 
+	private final JTextArea console = new JTextArea(15, 80);
     private final DefaultListModel<String> agvListModel = new DefaultListModel<>();
     private final DefaultListModel<String> luggageListModel = new DefaultListModel<>();
     private final DefaultListModel<String> stationListModel = new DefaultListModel<>();

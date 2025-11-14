@@ -10,6 +10,7 @@ import SmartAirport.src.main.java.QueueManage;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+
 public class QueueManageTest {
     private QueueManage queue;
     private LogService log;

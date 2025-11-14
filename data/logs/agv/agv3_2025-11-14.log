@@ -9,3 +9,7 @@
 [2025-11-14 01:38:58] AGV-3 moving to Gate J
 [2025-11-14 01:38:58] AGV-3 reached Gate J | Battery: 15.0%
 [2025-11-14 01:39:00] AGV-3 unloaded baggage 9 into storage.
+[2025-11-14 02:01:56] AGV-3 loaded baggage 3
+[2025-11-14 02:01:58] AGV-3 moving to Gate D
+[2025-11-14 02:01:58] AGV-3 reached Gate D | Battery: 75.0%
+[2025-11-14 02:01:59] AGV-3 unloaded baggage 3 into storage.

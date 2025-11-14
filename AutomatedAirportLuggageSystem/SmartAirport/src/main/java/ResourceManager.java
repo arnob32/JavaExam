@@ -4,6 +4,7 @@ package SmartAirport.src.main.java;
 
 import java.io.*;
 
+
 public class ResourceManager {
     public void clearOldLogs() {
         File logDir = new File("logs");

@@ -2,6 +2,7 @@ package SmartAirport.src.main.java;
 
 
 
+
 public class Baggage {
     private final int id;
     private final String destination;

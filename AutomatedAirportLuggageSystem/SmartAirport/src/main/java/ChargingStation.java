@@ -3,6 +3,7 @@ package SmartAirport.src.main.java;
 import javax.swing.*;
 
 
+
 public class ChargingStation {
     private final int id;
     private final String location;

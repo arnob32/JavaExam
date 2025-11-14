@@ -3,6 +3,7 @@ package SmartAirport.src.main.java;
 
 import java.util.*;
 
+
 public class StorageArea {
     private final int id;
     private final String location;

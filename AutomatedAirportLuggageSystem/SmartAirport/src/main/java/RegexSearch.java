@@ -3,6 +3,7 @@ import java.io.*;
 import java.util.regex.*;
 
 
+
 public class RegexSearch {
     public void searchLogs(String pattern) {
         File dir = new File("logs");
